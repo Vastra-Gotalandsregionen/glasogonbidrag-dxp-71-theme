@@ -26,6 +26,7 @@
     background: $gb-white;
     border: 1px solid $gb-silver;
     border-width: 0 0 0 1px;
+    width: auto;
 
     @include border-radius(0);
     @include box-shadow(none);
