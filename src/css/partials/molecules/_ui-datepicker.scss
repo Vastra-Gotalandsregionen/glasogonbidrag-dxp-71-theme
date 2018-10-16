@@ -1,0 +1,107 @@
+.ui-datepicker {
+
+  background: $gb-gallery;
+  border-color: $gb-alto;
+
+  @include border-radius(0);
+
+  .ui-datepicker-header {
+    background: $gb-mirage;
+    border-color: $gb-mirage;
+    text-shadow: none;
+    @include border-radius(0);
+
+    a {
+      @include border-radius(0);
+
+      &.ui-state-hover {
+        background: $gb-white;
+        border: none;
+        color: $gb-mirage;
+
+        background: transparent;
+      }
+
+    }
+
+    .ui-datepicker-prev,
+    .ui-datepicker-next {
+      border: none;
+      font-weight: normal;
+      top: 2px;
+
+      @include border-radius(0);
+      @include box-shadow(none);
+
+      .ui-icon {
+        background: transparent;
+        color: $gb-white;
+        @include border-radius(0);
+        @include box-shadow(none);
+
+        &:before {
+          display: block;
+          @include iconfont();
+        }
+      }
+
+      &.ui-state-hover {
+        font-weight: normal;
+        top: 2px;
+      }
+
+    }
+
+    .ui-datepicker-next {
+      right: 2px;
+
+      &.ui-state-hover {
+        right: 2px;
+      }
+
+      .ui-icon:before {
+        content: $content-chevron-right;
+      }
+    }
+
+    .ui-datepicker-prev {
+      left: 2px;
+
+      &.ui-state-hover {
+        left: 2px;
+      }
+
+      .ui-icon:before {
+        content: $content-chevron-left;
+      }
+    }
+
+  }
+
+  .ui-datepicker-calendar {
+    text-align: center;
+
+    a {
+      background: $gb-white;
+      border: 1px solid $gb-alto;
+      color: $gb-mirage;
+      text-shadow: none;
+
+      &.ui-state-hover {
+        border-color: $gb-mirage;
+        text-shadow: none;
+      }
+
+      &.ui-state-active {
+        background: $gb-mirage;
+        border-color: $gb-mirage;
+        color: $gb-white;
+        font-weight: normal;
+        text-shadow: none;
+      }
+
+    }
+
+  }
+
+}

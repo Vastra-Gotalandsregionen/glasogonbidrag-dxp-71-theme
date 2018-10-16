@@ -1,0 +1,33 @@
+.link-icon {
+
+  color: $gb-tundora;
+  text-decoration: none;
+
+  &:visited,
+  &:active {
+    color: $gb-tundora;
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: $gb-black;
+    text-decoration: none;
+  }
+
+
+  &:before {
+    @include iconfont(1.2em);
+    display: inline-block;
+    content: $content-arrow-right;
+  }
+
+  span {
+    font-size: 0;
+    text-indent: -9999em;
+  }
+
+  &.link-icon-email:before {
+    content: $content-envelope-o;
+  }
+
+}

@@ -1,0 +1,71 @@
+// This file contains styling which overrides the standard Liferay portlets
+// Things like styling the search engine results page, the blog etc.
+// --------
+
+
+// All portlets
+.portlet {
+
+	.portlet-title-text {
+		font-size: 1.3em;
+		line-height: 1.3;
+	}
+
+	&:hover,
+	&.active {
+		> .portlet-content-editable {
+			//border: none;
+			border-color: transparent;
+		}
+	}
+
+}
+
+.portlet-borderless-container {
+  min-height: 0;
+}
+
+// Hide portlet title when not in edit mode
+.custom-admin-controls-closed {
+
+	.portlet {
+
+		.portlet-header {
+			display: none;
+		}
+
+		.portlet-topper {
+			display: none;
+		}
+
+		.portlet-title-text {
+			display: none;
+		}
+
+		.portlet-content-editable {
+			padding: 0;
+		}
+
+	}
+}
+
+
+// Web Content Display and Asset Publisher
+.portlet-journal-content,
+.portlet-asset-publisher {
+
+	.portlet-content {
+		.portlet-body {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+}
+
+// Web Content Display
+.portlet-journal-content {
+	.portlet-borderless-container .journal-content-article {
+		margin-bottom: 15px;
+	}
+}

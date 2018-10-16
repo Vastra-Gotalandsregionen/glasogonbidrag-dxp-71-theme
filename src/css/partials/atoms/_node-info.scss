@@ -1,0 +1,8 @@
+#wrapper {
+
+  > .alert,
+  > #content > .alert {
+    display: none;
+  }
+
+}

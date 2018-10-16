@@ -1,0 +1,53 @@
+.kpi-item {
+  margin: 20px 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .kpi-item-value {
+    color: $gb-mineshaft;
+    display: inline-block;
+    font-size: 2.5em;
+    margin-left: 0;
+    margin-right: 5px;
+  }
+
+  .kpi-item-label {
+    color: $gb-boulder;
+    display: inline-block;
+    font-size: 1.0em;
+    text-transform: uppercase;
+  }
+
+  &.kpi-item-label-left {
+    .kpi-item-value {
+      margin-left: 5px;
+      margin-right: 0;
+    }
+  }
+
+  &.kpi-item-skin-1 {
+    .kpi-item-value {
+      color: $gb-blue;
+    }
+  }
+
+  &.kpi-item-skin-2 {
+    .kpi-item-value {
+      color: $gb-green;
+    }
+  }
+
+  &.kpi-item-skin-3 {
+    .kpi-item-value {
+      color: $gb-red;
+    }
+  }
+
+
+}

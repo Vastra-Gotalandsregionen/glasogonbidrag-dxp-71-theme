@@ -1,0 +1,12 @@
+.ui-widget {
+  font-family: $font-family-standard;
+  font-size: 1em;
+}
+
+.ui-state-active {
+  a,
+  a:link,
+  a:visited {
+    color: $gb-blue;
+  }
+}

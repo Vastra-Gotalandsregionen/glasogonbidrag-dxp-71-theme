@@ -1,0 +1,49 @@
+// Overruling Liferay/Bootstrap styling
+// --------
+
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+	background-color: $gb-white;
+	border: 1px solid $gb-silver;
+	display: inline-block;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	height: 26px;
+	padding: 4px 6px;
+	margin-bottom: 13px;
+	font-size: 16px;
+	line-height: 26px;
+	color: $gb-emperor;
+	vertical-align: middle;
+	@include border-radius(2px);
+	@include box-shadow(inset 0 1px 1px rgba(0,0,0,0.075));
+	@include transition(border linear .2s,box-shadow linear .2s);
+}
+
+.input-very-short {
+	width: 40px;
+}
+
+.input-medium {
+	width: 40%;
+}
+
+.input-large {
+	width: 70%;
+}
+
+textarea.input-large {
+	height: 7em;
+}

@@ -1,0 +1,25 @@
+.wrapper-outer {
+  border-top: 10px solid $gb-mirage;
+  position: relative;
+  margin-left: 60px;
+}
+
+.signed-in.has-control-menu.custom-admin-controls-open {
+  .wrapper-outer {
+    margin-top: $quick-access-navigation-height;
+  }
+}
+
+.signed-out .wrapper-outer {
+  margin-left: 0;
+}
+
+#wrapper {
+  padding: 20px;
+}
+
+.has-control-menu.custom-admin-controls-closed {
+  #wrapper {
+    margin-top: 0;
+  }
+}

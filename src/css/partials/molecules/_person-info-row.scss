@@ -1,0 +1,20 @@
+.person-info-row {
+
+  @include flexbox();
+  @include flex-direction(row);
+
+  .person-info-item {
+    @include box-sizing(border-box);
+    margin-right: 1em;
+
+    &.personnumber {
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+
+  }
+
+
+
+
+}

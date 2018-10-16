@@ -1,0 +1,65 @@
+.gb-invoice-hd {
+  background: $gb-wildsand;
+  border: 1px solid $gb-alto;
+  border-width: 1px 0;
+  margin: -20px -20px 20px -20px;
+  padding: 5px 20px;
+
+  @include clearfix();
+
+  .gb-invoice-hd-item {
+      border: 0px solid $gb-alto;
+      display: inline-block;
+      font-size: 1.1em;
+      padding: 0.3em 0.4em;
+  }
+
+  .button-row {
+    margin: 0;
+    font-size: 1.0em;
+    text-align: right;
+
+    .link-btn {
+      padding: 0.3em 0.8em;
+    }
+  }
+
+
+  .gb-invoice-hd-left,
+  .gb-invoice-hd-right {
+      display: inline-block;
+      float: left;
+      width: 49.9%;
+      @include box-sizing(border-box);
+  }
+
+  .gb-invoice-hd-left {
+    text-align: left;
+
+    .gb-invoice-hd-item {
+      border-right-width: 1px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        //border-right-width: 0;
+      }
+    }
+  }
+
+  .gb-invoice-hd-right {
+    text-align: right;
+
+    .gb-invoice-hd-item {
+      border-left-width: 1px;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+
+}

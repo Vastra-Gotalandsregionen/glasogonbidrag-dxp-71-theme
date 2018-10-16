@@ -1,0 +1,261 @@
+$menuWidthMinimized: 60px;
+$menuWidthMaximized: 340px;
+$menuIconItemLineHeight: 50px;
+$menuIconItemWidth: 60px;
+$menuItemPadding: 10px;
+
+.gb-menu-main {
+  background-color: $gb-mirage;
+  color: $gb-white;
+  height: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  @include box-sizing(border-box);
+
+  *,
+  *:after,
+  *:before {
+    @include box-sizing(border-box);
+  }
+
+  .gb-menu-wrapper {
+    background-color: $gb-mirage;
+    border-right: 1px solid tint($gb-mirage, 10);
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    padding-top: 0;
+    position: fixed;
+    top: 0;
+    width: $menuWidthMinimized;
+
+    transition: transform 0.3s, width 0.3s;
+
+    &.gb-menu-open {
+      width: $menuWidthMaximized;
+    }
+
+  }
+
+  a {
+    color: $gb-white;
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    text-decoration: none;
+
+    &:hover{
+      background-color: tint($gb-mirage, 15);
+    }
+
+  }
+
+  .gb-scroller {
+    height: 100%;
+    position: absolute;
+    overflow-y: scroll;
+    width: $menuWidthMaximized;
+    //width: $menuWidthMaximized + 30px;
+    z-index: 10;
+  }
+
+  .gb-menu {
+    background: transparent;
+    border-bottom: 1px solid tint($gb-mirage, 10);
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    text-transform: none;
+    line-height: $menuIconItemLineHeight;
+    text-align: left;
+
+    li {
+      border-top: 1px solid tint($gb-mirage, 10);
+      line-height: $menuIconItemLineHeight;
+
+      &.gb-open-only {
+        display: none;
+      }
+
+      &.selected {
+        a {
+          background-color: tint($gb-mirage, 15);
+        }
+      }
+
+      &.user-info {
+        line-height: 1;
+
+        > span {
+          background-color: darken($gb-mirage, 5);
+          display: block;
+          padding: $menuItemPadding $menuItemPadding;
+          visibility: hidden;
+
+          .username {
+            font-weight: bold;
+          }
+
+        }
+      }
+
+      &.progress-wrap {
+        line-height: 1.1;
+        // Start test
+        height: 70px;
+        // End test
+        padding: $menuItemPadding;
+
+        .user-progress {
+          .user-progress-simple {
+            display: block;
+            line-height: 70px;
+            width: $menuWidthMinimized - $menuItemPadding - $menuItemPadding;
+          }
+          .user-progress-details {
+            display: none;
+          }
+          .user-progress-loading-mask {
+            background: $gb-mirage;
+            width: $menuWidthMinimized - $menuItemPadding - $menuItemPadding;
+
+            &:before {
+              top: 35%;
+            }
+          }
+        }
+      }
+
+      &.gb-icon {
+
+        a:before {
+          @include iconfont();
+          content: $content-arrow-right;
+          display: inline-block;
+          line-height: 1;
+          text-align: center;
+          width: $menuIconItemWidth;
+        }
+
+        &.gb-icon-default a:before {
+          content: $content-arrow-right;
+        }
+
+        &.gb-icon-home a:before {
+          content: $content-home;
+        }
+
+        &.gb-icon-invoice-register a:before {
+          content: $content-pencil-square-o;
+        }
+
+        &.gb-icon-invoice-search a:before {
+          content: $content-search;
+        }
+
+        &.gb-icon-beneficiaries a:before {
+          content: $content-users;
+        }
+
+        &.gb-icon-statistics a:before {
+          content: $content-bar-chart;
+        }
+
+        &.gb-icon-manage-basic-data a:before {
+          content: $content-database;
+        }
+
+        &.gb-icon-dockbar a:before {
+          content: $content-cog;
+        }
+
+        &.gb-icon-sign-in a:before {
+          content: $content-sign-in;
+        }
+
+        &.gb-icon-sign-out a:before {
+          content: $content-sign-out;
+        }
+
+
+      }
+
+    }
+
+  }
+
+  .logo {
+    display: none;
+    padding: 2*$menuItemPadding 0;
+    bottom: $menuItemPadding;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+  }
+
+
+  .gb-menu-open {
+
+    .gb-menu {
+
+      li {
+
+        &.user-info {
+          > span {
+            visibility: visible;
+          }
+        }
+
+        &.progress-wrap {
+
+          .user-progress {
+
+            .user-progress-simple {
+              display: none;
+            }
+
+            .user-progress-details {
+              display: block;
+            }
+
+            .user-progress-loading-mask {
+              width: 100%;
+            }
+
+          }
+
+        }
+
+        &.gb-open-only {
+          display: block;
+        }
+
+      }
+
+    }
+
+    .logo {
+      display: block;
+    }
+
+  }
+
+
+
+
+
+}
+
+.signed-in.has-control-menu.custom-admin-controls-open {
+  .gb-menu-main {
+    .gb-menu {
+        margin-top: $quick-access-navigation-height;
+    }
+  }
+}

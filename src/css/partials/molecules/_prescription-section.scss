@@ -1,0 +1,91 @@
+.prescription-section {
+  border: 1px solid rgba($gb-bombay, 0.3);
+  border-width: 0 0 1px 0;
+  padding: 10px 0;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    //padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  @include clearfix();
+
+  label {
+    display: inline-block;
+  }
+
+  .prescription-section-main {
+    float: left;
+    position: relative;
+    width: 150px;
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin: 0;
+    }
+
+    label {
+      font-weight: bold;
+      margin: 0;
+      margin-left: 5px;
+    }
+
+  }
+
+  .prescription-section-fields {
+    float: left;
+    position: relative;
+
+
+    .prescription-section-fieldset {
+      border: 1px solid rgba($gb-bombay, 0.3);
+      border-width: 0 1px 0 0;
+      display: inline-block;
+      margin: 0 8px 0 0;
+
+
+      &:last-child {
+        border-width: 0;
+      }
+    }
+
+    .prescription-section-field {
+      display: inline-block;
+      margin: 0 8px 0 8px;
+      vertical-align: top;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+    }
+
+    label {
+      margin: 0;
+      vertical-align: top;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin: 0;
+    }
+
+
+    input[type="radio"] + label,
+    input[type="checkbox"] + label {
+      margin-left: 3px;
+    }
+
+    label + input[type="text"] {
+      margin: 0;
+      margin-left: 3px;
+    }
+
+
+  }
+
+}

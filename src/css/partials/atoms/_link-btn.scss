@@ -1,0 +1,60 @@
+
+.link-btn {
+
+  background: $gb-white;
+  border: 1px solid $gb-mineshaft;
+  color: $gb-mineshaft;
+  display: inline-block;
+  padding: 0.3em 0.8em;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    background: $gb-mineshaft;
+    color: $gb-white;
+    text-decoration: none;
+  }
+
+  &:focus,
+  &:active {
+    background: $gb-mineshaft;
+    color: $gb-white;
+    text-decoration: none;
+  }
+
+  &.primary {
+    background: $gb-mineshaft;
+    color: $gb-white;
+
+    &:hover {
+      background: $gb-white;
+      color: $gb-mineshaft;
+    }
+
+    &:active {
+      background: $gb-white;
+      color: $gb-mineshaft;
+    }
+  }
+
+  &.cancel {
+    background: transparent;
+    border-color: transparent;
+    color: $gb-mineshaft;
+
+    &:hover {
+      background: transparent;
+      color: $gb-mineshaft;
+      text-decoration: underline;
+    }
+
+    &:active {
+      background: transparent;
+      color: $gb-mineshaft;
+      text-decoration: underline;
+    }
+  }
+
+
+
+}

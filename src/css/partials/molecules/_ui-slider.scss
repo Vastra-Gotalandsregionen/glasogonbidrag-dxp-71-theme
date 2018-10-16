@@ -1,0 +1,26 @@
+.ui-slider {
+  background: $gb-white;
+  border: 1px solid $gb-alto;
+  height: 0.8em;
+  margin-top: 0.4em;
+  @include box-shadow(none);
+
+
+
+  .ui-slider-range {
+    background: $gb-linkwater;
+    @include box-shadow(none);
+  }
+
+  .ui-slider-handle {
+    background: $gb-mirage;
+    //background: $gb-white;
+    border: 1px solid $gb-mirage;
+    height: 1.2em;
+    top: -0.3em;
+    width: 1.2em;
+    @include border-radius(50%);
+    @include box-shadow(none);
+  }
+
+}

@@ -1,0 +1,45 @@
+.portlet-navigation {
+
+  .nav-menu {
+
+    > ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      @include clearfix();
+
+      > li {
+
+        float: left;
+        margin: 0;
+        padding: 0;
+        width: 33.33%;
+
+        > a {
+          background: $gb-mirage;
+          color: $gb-white;
+          display: block;
+          font-weight: normal;
+          line-height: 1.2;
+          margin: 20px;
+          height: 100px;
+          overflow: hidden;
+          padding: 30px;
+          text-align: center;
+          text-decoration: none;
+          @include box-sizing(border-box);
+          @include border-radius();
+
+          &:hover {
+            background: tint($gb-mirage, 10);
+          }
+
+        }
+
+      }
+    }
+
+  }
+
+}

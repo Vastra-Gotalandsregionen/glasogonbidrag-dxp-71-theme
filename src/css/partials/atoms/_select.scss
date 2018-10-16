@@ -1,0 +1,11 @@
+select {
+  display: inline-block;
+  height: 26px;
+  padding: 4px 6px;
+  margin-bottom: 13px;
+  font-size: 16px;
+  line-height: 26px;
+  color: $gb-emperor;
+  vertical-align: middle;
+  @include border-radius(2px);
+}

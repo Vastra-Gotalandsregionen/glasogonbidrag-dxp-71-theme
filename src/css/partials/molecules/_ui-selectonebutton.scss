@@ -1,0 +1,32 @@
+.ui-selectonebutton {
+
+  .ui-button {
+    background: $gb-white;
+    border: 1px solid $gb-silver;
+    color: $gb-mineshaft;
+    font-weight: normal;
+    margin: 0;
+
+    border-width: 1px 1px 1px 0;
+
+    @include border-radius(0);
+    @include box-shadow(none);
+
+    &:first-child {
+      border-width: 1px;
+    }
+
+    &:last-child {}
+
+    &.ui-state-hover {
+      background: $gb-linkwater;
+    }
+
+    &.ui-state-active {
+      background: $gb-mirage;
+      color: $gb-white;
+    }
+
+  }
+
+}

@@ -1,0 +1,63 @@
+ul.gb-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    border: 1px solid tint($gb-linkwater, 60);
+    border-width: 1px 0 0 0;
+    display: block;
+    margin: 0;
+    padding: 0.5em 0.5em;
+
+    &:last-child {
+      border-bottom-width: 1px;
+    }
+
+    &:nth-child(even) {
+      background: tint($gb-linkwater, 60);
+    }
+
+    &:nth-child(odd) {
+      background: transparent;
+    }
+
+  }
+
+  &.gb-list-3 {
+    li {
+      @include clearfix();
+      .gb-list-row-item {
+        display: block;
+        float: left;
+        padding: 0 5px;
+        width: 33%;
+        @include box-sizing(border-box);
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &:last-child {
+          padding-right: 0;
+        }
+
+        &.date {
+          width: 40%;
+        }
+
+        &.currency {
+          text-align: right;
+          width: 29.5%;
+        }
+
+        &.status {
+          text-align: right;
+          width: 29.5%;
+        }
+
+      }
+    }
+  }
+
+}

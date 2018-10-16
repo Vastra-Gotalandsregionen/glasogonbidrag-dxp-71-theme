@@ -1,0 +1,29 @@
+.row {
+
+	[class^="span"],
+	[class*=" span"] {
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+
+
+}
+
+.signed-in.controls-hidden {
+	.row-fluid {
+		[class*="span"] {
+			min-height: 1px;
+		}
+	}
+
+}
+
+
+.signed-in.controls-visible {
+	.row-fluid {
+		[class*="span"] {
+			min-height: 36px;
+		}
+	}
+}

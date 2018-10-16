@@ -1,0 +1,68 @@
+// This file contains all overall scaffolding which is not part of the grid.
+// Things like main content padding/margins
+// --------
+
+.portlet-column-content.empty {
+	padding: 0;
+}
+
+.custom-admin-controls-open.controls-visible {
+	.portlet-column-content.empty {
+		padding: 50px;
+	}
+}
+
+
+// Start test
+.glasogonbidrag-portlet {
+
+	.row {
+		margin-left: 0;
+		margin-righ: 0;
+	}
+
+	.gb-full-width-wrap {
+		// "Reset" wrapper padding
+		// Left and right only -5px since .row has -15px margin on left and right
+		margin: -20px -5px -20px -5px;
+
+		.row {
+
+			.col-md-3,
+			.col-md-6 {
+				height: 100vh;
+			}
+
+			.col-md-3 {
+				background: $gb-wildsand;
+				//Test
+				margin-left: 0;
+				margin-right: 0;
+				padding-left: 0;
+				padding-right: 0;
+				width: 25%;
+
+				&:first-child {
+					border-right: 1px solid $gb-alto;
+				}
+
+				&:last-child {
+					border-left: 1px solid $gb-alto;
+				}
+			}
+
+			.col-md-6 {
+				background: $gb-white;
+				margin-left: 0;
+				margin-right: 0;
+				padding: 0 2.5641%;
+				padding: 0 1em;
+				width: 50%;
+			}
+
+		}
+
+	}
+
+}
+// End test

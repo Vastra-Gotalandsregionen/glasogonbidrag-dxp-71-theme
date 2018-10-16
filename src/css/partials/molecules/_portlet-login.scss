@@ -1,0 +1,19 @@
+.portlet-login {
+
+  // Forgot password etc
+  // Should be disabled through portal-ext
+  .navigation {
+    display: none;
+  }
+
+  // Remember me
+  // Should be disabled through portal-ext
+  .input-checkbox-wrapper {
+    display: none;
+  }
+
+}
+
+.columns-gb-1-3-1 {
+  .portlet-login {}
+}

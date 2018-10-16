@@ -1,0 +1,86 @@
+.ui-paginator {
+  background: $gb-linkwater;
+  background: transparent;
+  border: 1px solid $gb-linkwater;
+  border: none;
+  border-bottom: 1px solid $gb-silver;
+  padding: 10px 0;
+  color: $gb-mineshaft;
+  @include border-top-left-radius();
+  @include border-top-right-radius();
+
+  .ui-paginator-current {
+    font-weight: normal;
+  }
+
+  .ui-paginator-rpp-options {
+    background: $gb-white;
+    border: 1px solid $gb-silver;
+    color: $gb-mineshaft;
+    margin-bottom: 0;
+    min-width: 70px;
+    width: auto;
+
+    &.ui-state-hover {
+      background: $gb-white;
+      border: 1px solid $gb-boulder;
+    }
+  }
+
+  // Hide disabled controls
+  .ui-state-disabled {
+    display: none;
+  }
+
+  span.ui-state-default {
+    background: transparent;
+    border: none;
+    color: $gb-mineshaft;
+    font-weight: normal;
+    text-decoration: underline;
+    text-shadow: none;
+    @include box-shadow(none);
+    @include border-radius(0);
+  }
+
+  span.ui-state-active {
+    background: $gb-blue;
+    color: $gb-white;
+    text-decoration: none;
+  }
+
+  .ui-paginator-first,
+  .ui-paginator-prev,
+  .ui-paginator-next,
+  .ui-paginator-last {
+
+    &:after {
+      color: $gb-mineshaft;
+      display: inline-block;
+      height: 16px;
+      width: 16px;
+      @include iconfont(1.0em);
+    }
+
+    .ui-icon {
+      display: none;
+    }
+  }
+
+  .ui-paginator-first:after {
+    content: $content-icon-step-backward;
+  }
+
+  .ui-paginator-prev:after {
+    content: $content-chevron-left;
+  }
+
+  .ui-paginator-next:after {
+    content: $content-chevron-right;
+  }
+
+  .ui-paginator-last:after {
+    content: $content-icon-step-forward;
+  }
+
+}

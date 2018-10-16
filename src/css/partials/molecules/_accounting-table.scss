@@ -1,0 +1,30 @@
+.accounting-table {
+
+  thead {
+    tr {
+      th {
+        padding: 0.5em;
+        text-align: left;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        padding: 0.5em;
+        text-align: left;
+
+        &:first-child {}
+
+        &:last-child {}
+
+      }
+    }
+  }
+
+  input[type="text"] {
+    width: 90%;
+  }
+
+}

@@ -1,0 +1,69 @@
+.user-progress {
+
+  position: relative;
+
+  .user-progress-simple {
+    //color: $gb-white;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &.complete {
+    .user-progress-simple {
+      background: $gb-green;
+    }
+  }
+
+  .user-progress-details {
+    text-align: center;
+
+    .progress-label {
+      display: block;
+      padding: 2px;
+    }
+
+    .progress-bar {
+      background: $gb-white;
+      display: block;
+      padding: 1px;
+      margin: 7px 0 0 0;
+
+      @include border-radius();
+
+      .progress-bar-inner {
+        background: $gb-green;
+        height: 10px;
+        width: auto;
+      }
+
+    }
+
+    .progress-info {}
+
+  }
+
+  .user-progress-loading-mask {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+
+    &:before {
+      @include iconfont();
+      color: #fff;
+      content: $content-spinner;
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      @include spin(1.5s);
+    }
+
+  }
+
+}

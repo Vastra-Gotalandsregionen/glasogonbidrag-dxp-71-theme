@@ -1,0 +1,36 @@
+.ui-selectonemenu-panel {
+
+  @include border-radius(0);
+  @include box-shadow(none);
+
+  .ui-selectonemenu-list {
+
+    background: $gb-white;
+    border: 1px solid $gb-alto;
+
+    @include border-radius(0);
+    @include box-shadow(none);
+  }
+
+  .ui-selectonemenu-item {
+    color: $gb-mineshaft;
+    margin: 0;
+    padding: 5px 10px;
+    text-shadow: none;
+    @include border-radius(0);
+    @include box-shadow(none);
+
+    &.ui-state-highlight {
+      background: $gb-silver;
+      border: none;
+    }
+
+    &.ui-state-hover {
+      background: $gb-gallery;
+      border: none;
+      font-weight: normal;
+    }
+
+  }
+
+}

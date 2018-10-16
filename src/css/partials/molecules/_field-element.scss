@@ -1,0 +1,23 @@
+.field-element {
+
+  label {
+    display: block;
+    font-weight: bold;
+  }
+
+  &.inline {
+    label {
+      display: inline-block;
+    }
+  }
+
+  &.field-element-radio,
+  &.field-element-checkbox {
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin: 0 4px 0 0;
+    }
+
+  }
+
+}

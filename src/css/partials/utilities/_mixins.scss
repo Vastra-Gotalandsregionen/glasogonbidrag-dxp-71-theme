@@ -1,0 +1,393 @@
+// Mediaqueries
+@mixin xsmall {
+  @media screen and (min-width : $bp-xsmall) {
+    @content;
+  }
+}
+
+@mixin small {
+	@media screen and (min-width : $bp-small) {
+		@content;
+	}
+}
+
+@mixin medium {
+	@media screen and (min-width : $bp-medium) {
+		@content;
+	}
+}
+
+@mixin large {
+	@media screen and (min-width : $bp-large) {
+		@content;
+	}
+}
+
+@mixin max-medium {
+  @media screen and (max-width : $bp-medium) {
+    @content;
+  }
+}
+
+
+
+
+
+@mixin height-xsmall {
+  @media screen and (min-height : $bp-height-xsmall) {
+    @content;
+  }
+}
+
+@mixin height-small {
+	@media screen and (min-height : $bp-height-small) {
+		@content;
+	}
+}
+
+@mixin height-medium {
+	@media screen and (min-height : $bp-height-medium) {
+		@content;
+	}
+}
+
+@mixin height-large {
+	@media screen and (min-height : $bp-height-large) {
+		@content;
+	}
+}
+
+// Icon font
+// --------
+// For making icon fonts with font awesome
+@mixin iconfont($font-size:1.2em) {
+  //font-family: 'fontawesome-alloy';
+  font-family: 'FontAwesome';
+  speak: none;
+  font-size: $font-size;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-indent: 0;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+// Clearfix
+// --------
+// For clearing floats like a boss h5bp.com/q
+@mixin clearfix {
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    display: table;
+    content: '';
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+// Colors when user select text. Preferebly set in body {}
+// --------
+@mixin markedtext($bg-color, $font-color) {
+  ::selection {
+    background: $bg-color;
+    color: $font-color;
+  }
+  ::-moz-selection {
+    background: $bg-color;
+    color: $font-color;
+  }
+}
+
+
+// Edge to edge.
+// Used if we want to put background color edge to edge of the screen, even
+// to the left/right of the grid, without having to close the grid.
+// Most commonly used together with background-color.
+// --------
+%edgetoedge {
+  margin-left: -9999px;
+  padding-left: 9999px;
+  margin-right: -9999px;
+  padding-right: 9999px;
+}
+
+// Creating a triangle
+// --------
+@mixin triangle ($size, $color, $direction) {
+  height: 0;
+  width: 0;
+
+  @if ($direction == up) or ($direction == down) or ($direction == right) or ($direction == left) {
+    border-color: transparent;
+    border-style: solid;
+    border-width: $size / 2;
+
+    @if $direction == up {
+      border-bottom-color: $color;
+
+    } @else if $direction == right {
+      border-left-color:   $color;
+
+    } @else if $direction == down {
+      border-top-color:    $color;
+
+    } @else if $direction == left {
+      border-right-color:  $color;
+    }
+  }
+
+  @else if ($direction == up-right) or ($direction == up-left) {
+    border-top: $size solid $color;
+
+    @if $direction == up-right {
+      border-left:  $size solid transparent;
+
+    } @else if $direction == up-left {
+      border-right: $size solid transparent;
+    }
+  }
+
+  @else if ($direction == down-right) or ($direction == down-left) {
+    border-bottom: $size solid $color;
+
+    @if $direction == down-right {
+      border-left:  $size solid transparent;
+
+    } @else if $direction == down-left {
+      border-right: $size solid transparent;
+    }
+  }
+}
+
+
+
+// Underline. For creating beautiful underlining (commonly of links)
+// Read more https://github.com/Team-Sass/toolkit
+// --------
+@mixin underline($background: $is-white, $color: $is-black, $clear-descenders: true, $distance: 1, $width: 2, $extend: false) {
+
+  $px: .0625em;
+
+  @include underline-core($extend);
+
+  @if mixin-exists(background-image) and function-exists(linear-gradient) {
+    @include background-image(
+      linear-gradient(bottom, $background 75%, $color 75%)
+    );
+  }
+  @else {
+    background-image: linear-gradient(to top, $background 75%, $color 75%);
+  }
+  background-size: (2 * $px) ((1 + $width) * $px);
+  background-position: 0 (($width) * $px) + $distance;
+
+  @if $clear-descenders {
+    text-shadow: (1 * $px) (1 * $px) 0 $background, (-1 * $px) 0 0 $background;
+  }
+}
+
+@mixin underline-core($extend: null) {
+  $extend: if($extend != null, $extend, toolkit-get('underline extend'));
+
+  @if $extend {
+    @include dynamic-extend('underline') {
+      @include underline-core(false);
+    }
+  }
+  @else {
+    text-decoration: none;
+    background-repeat: repeat-x;
+  }
+}
+
+
+// Animation
+// Read more http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
+// --------
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+@include keyframes(fade-in) {
+  0% { opacity: 0; }
+  90% { opacity: 1; }
+}
+
+
+
+
+// Fade in on hover
+// Time is optional
+@mixin hover-fade-in ($time:$default-transition-time) {
+  @include transition(background #{$time} ease);
+}
+
+// Flexbox
+@mixin flexbox() {
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-direction($direction: row) {
+  -webkit-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+}
+
+@mixin flex-flow($value) {
+  -webkit-flex-flow: $value;
+  -moz-flex-flow: $value;
+  -ms-flex-flow: $value;
+  flex-flow: $value;
+}
+
+
+@mixin flex-wrap($value) {
+  -webkit-flex-wrap: $value;
+  -moz-flex-wrap: $value;
+  -ms-flex-wrap: $value;
+  flex-wrap: $value;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin order($value) {
+  -webkit-box-ordinal-group: $value;
+  -moz-box-ordinal-group: $value;
+  -ms-flex-order: $value;
+  -webkit-order: $value;
+  order: $value;
+}
+
+// Spinning Icons
+// --------------------------
+// Spinning Icons
+// --------------------------
+
+@-webkit-keyframes gb-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes gb-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@mixin spin($duration: 2s, $iterationCount: infinite) {
+  @include animation(gb-spin $duration $iterationCount linear);
+}
+
+/*
+.gb-pulse {
+  -webkit-animation: gb-spin 1s infinite steps(8);
+          animation: gb-spin 1s infinite steps(8);
+}
+*/
+
+// Grow
+// --------------------------
+// Used for expanding with unknown height
+// https://jdsteinbach.com/css/snippet-animate-display-transform/
+// --------------------------
+@keyframes grow {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+    @include transform(scale(0));
+  }
+  100% {
+    opacity: 1;
+    @include transform(scale(1));
+  }
+}
+
+@keyframes growX {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+    @include transform(scaleX(0));
+  }
+  100% {
+    opacity: 1;
+    @include transform(scaleX(1));
+  }
+}
+
+
+@keyframes growY {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+    @include transform(scaleY(0));
+  }
+  100% {
+    opacity: 1;
+    @include transform-origin(50%, 0);
+    @include transform(scaleY(1));
+  }
+}

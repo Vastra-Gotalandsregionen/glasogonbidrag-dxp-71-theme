@@ -1,0 +1,151 @@
+.box {
+  background: transparent;
+  margin: 0 0 1em 0;
+  padding: 1em;
+
+  @include box-shadow(0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24));
+  @include border-radius();
+
+
+  .box-hd {
+    position: relative;
+    .box-title {
+      color: $gb-emperor;
+      font-size: 1.2em;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+    }
+  }
+
+  .box-bd {
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+  }
+
+  .box-hd + .box-bd {
+    margin-top: 1em;
+  }
+
+  .simple-table {
+    background: $gb-white;
+    margin-bottom: 1em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .button-row {
+    background: tint($gb-linkwater, 60);
+    background: $gb-white;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+
+    margin: 0 -1em -1em -1em;
+    padding: 10px 0;
+  }
+
+
+  &.box-tight {
+    padding: 0;
+  }
+
+  &.box-clean {
+    @include box-shadow(none);
+    @include border-radius(0);
+  }
+
+  &.box-sidebar {
+    font-size: 0.9em;
+    margin: 0;
+    padding: 0;
+
+    @include box-shadow(none);
+    @include border-radius(0);
+
+    .box-hd {
+      background: $gb-wildsand;
+      border: 1px solid $gb-alto;
+      border-width: 1px 0;
+      padding: 0.5em 0.5em;
+
+      .box-title {
+        font-size: 1.0em;
+        text-transform: uppercase;
+      }
+
+    }
+
+    .box-bd {
+      background: $gb-wildsand;
+      padding: 1em;
+    }
+
+    .box-hd + .box-bd {
+      margin-top: 0;
+    }
+
+    &.box-expanded {
+      .box-hd {
+        background: #eee;
+      }
+      .box-bd {
+      }
+    }
+
+  }
+
+  &.box-collapsible {
+
+      .box-hd {
+        .box-title {
+          cursor: pointer;
+
+          &:after {
+              @include iconfont();
+              content: $content-caret-down;
+              position: absolute;
+              top: 0;
+              right: 0;
+          }
+
+        }
+
+      }
+
+      .box-bd {
+        animation: growY .15s ease-out;
+      }
+
+      &.box-collapsed {
+        .box-hd {
+          .box-title {
+            &:after {
+              content: $content-caret-right;
+            }
+          }
+        }
+        .box-bd {
+          display: none;
+        }
+      }
+
+      &.box-sidebar {
+        .box-hd {
+          .box-title {
+            &:after {
+              top: 0.4em;
+              right: 0.5em;
+            }
+          }
+        }
+      }
+
+
+
+  }
+
+}

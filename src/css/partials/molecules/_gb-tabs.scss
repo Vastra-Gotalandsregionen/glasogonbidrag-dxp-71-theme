@@ -1,0 +1,75 @@
+.gb-tabs {
+  border: none;
+  margin: 0 -1em;
+  //padding: 0 1em;
+
+  .tabs-list {
+    //background: $gb-blue;
+    background: transparent;
+    border-bottom: 1px solid $gb-gallery;
+    list-style: none;
+    margin: 0;
+    padding: 0 1em;
+
+    @include clearfix();
+
+    li {
+      float: left;
+      margin: 0 1px 0 0;
+      padding: 0;
+      position: relative;
+
+      .tab,
+      .tab:link,
+      .tab:visited {
+        //color: $gb-white;
+        border: 2px solid transparent;
+        border-width: 0 0 3px 0;
+        color: $gb-mineshaft;
+        padding: 0.5em 1em;
+        display: block;
+        position: relative;
+        text-decoration: none;
+
+        &:hover {
+          background: $gb-white;
+          color: $gb-mineshaft;
+          text-decoration: none;
+        }
+      }
+
+      &.active {
+        //background: $gb-white;
+        //margin-bottom: -1px;
+        //padding-bottom: 1px;
+
+        .tab,
+        .tab:link,
+        .tab:visited {
+          border-color: $gb-blue;
+          color: $gb-mineshaft;
+        }
+      }
+
+    }
+  }
+
+
+  .tabs-content {
+    //background: $gb-white;
+    padding: 1em 1.4em;
+
+    // Start test
+    padding: 1em;
+    // End test
+
+    .button-row {
+      margin-left: -1.0em;
+      margin-right: -1.0em;
+
+      margin-bottom: 0;
+    }
+
+  }
+
+}

@@ -1,0 +1,12 @@
+.gb-ajax-mask {
+  position: absolute;
+
+  &.active {
+    background: #fff url(../images/progress_bar/loading_animation.gif) center center no-repeat;
+    height: 100%;
+    opacity: 0.8;
+    width: 100%;
+    z-index: 1000;
+  }
+
+}

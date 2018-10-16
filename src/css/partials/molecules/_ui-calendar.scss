@@ -1,0 +1,15 @@
+.ui-calendar {
+
+  input {
+    font-weight: normal;
+    text-shadow: none;
+    @include border-radius(0);
+    @include box-shadow(none);
+
+    &.ui-state-default {
+      background: $gb-white;
+    }
+  }
+
+
+}

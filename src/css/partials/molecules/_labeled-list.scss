@@ -1,0 +1,58 @@
+.labeled-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    border-bottom: 1px solid $gb-gallery;
+    line-height: 18px;
+    margin: 0 0 8px 0;
+    padding: 0 0 8px 0;
+    @include clearfix();
+
+    &:first-child {
+      border-top: 1px solid $gb-gallery;
+      padding-top: 8px;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .item-label {
+      display: block;
+      float: left;
+      padding-right: 2%;
+      width: 25%;
+    }
+
+    .item-value {
+      display: block;
+      float: left;
+      width: 72%;
+    }
+
+  }
+
+  &:last-child {
+    li {
+      &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+.box-sidebar {
+  .labeled-list {
+    li {
+      .item-label {
+        width: 35%;
+      }
+      .item-value {
+        width: 62%;
+      }
+    }
+  }
+}

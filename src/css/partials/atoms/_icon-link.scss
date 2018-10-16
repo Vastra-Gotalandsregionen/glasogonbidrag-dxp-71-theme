@@ -1,0 +1,31 @@
+.icon-link {
+
+  color: $gb-emperor;
+
+  &:hover {
+    color: $gb-mineshaft;
+    text-decoration: none;
+  }
+
+  &:before {
+    @include iconfont();
+    content: '';
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  span {
+    font-size: 0;
+    text-indent: -9999em;
+  }
+
+  &.icon-link-edit {
+    &:before {
+      content: $content-pencil-square-o;
+    }
+  }
+
+}

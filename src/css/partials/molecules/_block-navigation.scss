@@ -1,0 +1,87 @@
+.block-navigation {
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @include flexbox();
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+
+    li {
+      //min-width: 250px;
+      width: 33.3%;
+      margin: 0 1em 1em 1em;
+      margin: 0;
+      @include box-sizing(border-box);
+
+      a {
+        background: $gb-white;
+        color: $gb-mirage;
+        display: block;
+        min-height: 180px;
+        font-size: 1.1em;
+        margin: 0 1em 1em 1em;
+        padding: 2em;
+        text-align: center;
+        text-decoration: none;
+
+        @include box-shadow(0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24));
+        @include border-radius(2px);
+
+        &:hover {
+          @include box-shadow(0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23));
+        }
+
+      }
+
+      &.block-nav-icon a:before {
+        @include iconfont(1.4em);
+        display: inline-block;
+        content: $content-arrow-right;
+        margin-bottom: 0.3em;
+        text-align: center;
+      }
+
+      &.block-nav-icon-home a:before {
+        content: $content-home;
+      }
+
+      &.block-nav-icon-invoice-register a:before {
+        content: $content-pencil-square-o;
+      }
+
+      &.block-nav-icon-invoice-search a:before {
+        content: $content-search;
+      }
+
+      &.block-nav-icon-beneficiaries a:before {
+        content: $content-users;
+      }
+
+      &.block-nav-icon-statistics a:before {
+        content: $content-bar-chart;
+      }
+
+      &.block-nav-icon-manage-basic-data a:before {
+        content: $content-database;
+      }
+
+      &.block-nav-icon-dockbar a:before {
+        content: $content-cog;
+      }
+
+      &.block-nav-icon-sign-in a:before {
+        content: $content-sign-in;
+      }
+
+      &.block-nav-icon-sign-out a:before {
+        content: $content-sign-out;
+      }
+
+    }
+
+  }
+
+}

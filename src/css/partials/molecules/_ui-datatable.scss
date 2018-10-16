@@ -1,0 +1,171 @@
+.ui-datatable {
+
+  thead {
+    th {
+      background: $gb-gallery;
+      border-color: $gb-alto;
+      color: $gb-mineshaft;
+      vertical-align: top;
+      @include box-shadow(none);
+
+      &.ui-state-hover {
+        background: $gb-gallery;
+        background: $gb-alto;
+        border-color: $gb-boulder;
+        border-color: $gb-alto;
+        @include box-shadow(none);
+      }
+
+      .ui-sortable-column-icon {
+        background: transparent;
+        display: inline-block;
+        line-height: 1.0;
+        text-indent: 0;
+
+        &:after {
+          color: $gb-mineshaft;
+          display: inline-block;
+          content: $content-icon-unsorted;
+          height: 16px;
+          width: 16px;
+          @include iconfont(0.8em);
+        }
+
+        &.ui-icon-triangle-1-n:after {
+          content: $content-icon-sort-asc;
+        }
+
+        &.ui-icon-triangle-1-s:after {
+          content: $content-icon-sort-desc;
+        }
+
+      }
+
+      .ui-column-customfilter {
+        @include flexbox();
+
+        input,
+        select {
+          margin: 0;
+          width: 100%;
+          @include flex(1);
+        }
+
+        input[type="text"] {
+          &.ui-state-default,
+          &.ui-state-hover {
+            background: $gb-white;
+            border: 1px solid $gb-silver;
+            @include border-radius(0);
+            @include box-shadow(none);
+          }
+        }
+
+        .ui-selectonemenu {
+          width: 100%;
+          @include flex(1);
+        }
+
+      }
+
+
+      // .ui-column-filter {
+      //
+      //   &.ui-inputfield {
+      //     &.ui-state-default {
+      //       background: $gb-white;
+      //       border: 1px solid $gb-silver;
+      //       color: $gb-mineshaft;
+      //       font-size: 0.9em;
+      //       font-weight: normal;
+      //       line-height: 1.0;
+      //       @include border-radius();
+      //       @include box-shadow(none);
+      //     }
+      //     &.ui-state-hover {
+      //       border: 1px solid $gb-graydusty;
+      //     }
+      //     &.ui-state-focus {
+      //       border: 1px solid $gb-graydusty;
+      //     }
+      //   }
+      // }
+
+    }
+  }
+
+  tbody {
+    border-color: $gb-alto;
+
+    tr {
+      td {
+
+        background: $gb-wildsand;
+
+        a {
+          color: $gb-mineshaft;
+          text-decoration: underline;
+
+          &:hover {
+            color: $gb-mineshaft;
+            text-decoration: none;
+          }
+        }
+      }
+
+      &.ui-state-hover {
+        border-color: $gb-silver;
+
+        td {
+          background: $gb-gallery;
+        }
+
+        td,
+        a {
+          color: $gb-mineshaft;
+        }
+      }
+
+      &.ui-state-highlight {
+        background: $gb-blue;
+        border-color: $gb-blue;
+        color: $gb-white;
+        text-shadow: none;
+
+        td,
+        a {
+          color: $gb-white;
+        }
+      }
+
+
+    }
+
+  }
+
+  tfoot {
+    tr {
+      &.total-row {
+        font-weight: bold;
+      }
+
+      td {
+        background: $gb-gallery;
+        border-color: $gb-alto;
+        color: $gb-mineshaft;
+        text-align: left;
+
+        &.ui-state-default {
+          text-shadow: none;
+          @include box-shadow(none);
+        }
+      }
+    }
+  }
+
+  td.number,
+  td.currency {
+    text-align: right;
+  }
+
+}

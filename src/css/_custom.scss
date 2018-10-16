@@ -1,0 +1,115 @@
+/* These inject tags are used for dynamically creating imports for themelet styles, you can place them where ever you like in this file. */
+
+/* inject:imports */
+/* endinject */
+
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+
+// Vendor
+// ---------
+@import 'compass';
+@import "compass/css3";
+@import 'compass/typography/vertical_rhythm';
+
+@import 'custom_variables';
+
+// Liferay
+@import "mixins";
+
+@include establish-baseline; //Uses variables $base-font-size & $base-line-height
+
+// Import font awesome since Liferay's version is old.
+@import 'partials/utilities/font-awesome';
+
+body {
+	font-weight: $base-font-weight;
+	-webkit-font-smoothing: antialiased;
+}
+
+// Partials here
+
+@import 'partials/utilities/mixins';
+@import 'partials/utilities/jquery-ui';
+@import 'partials/utilities/jquery-ui-custom';
+@import 'partials/utilities/combines';
+@import 'partials/utilities/grid';
+@import 'partials/utilities/scaffolding';
+@import 'partials/utilities/portlet-overrides';
+
+@import 'partials/atoms/body';
+@import 'partials/atoms/buttons';
+@import 'partials/atoms/checkbox';
+@import 'partials/atoms/container';
+@import 'partials/atoms/form';
+@import 'partials/atoms/headings';
+@import 'partials/atoms/icon-link';
+@import 'partials/atoms/images';
+@import 'partials/atoms/inputs';
+@import 'partials/atoms/label';
+@import 'partials/atoms/link-btn';
+@import 'partials/atoms/link-icon';
+@import 'partials/atoms/links';
+@import 'partials/atoms/node-info';
+@import 'partials/atoms/paragraphs';
+@import 'partials/atoms/select';
+@import 'partials/atoms/table';
+@import 'partials/atoms/textarea';
+@import 'partials/atoms/wrapper';
+
+@import 'partials/molecules/accounting-table';
+@import 'partials/molecules/alert';
+@import 'partials/molecules/block-navigation';
+@import 'partials/molecules/box';
+@import 'partials/molecules/button-row';
+@import 'partials/molecules/chip';
+@import 'partials/molecules/control-menu';
+@import 'partials/molecules/dockbar';
+@import 'partials/molecules/dummy';
+@import 'partials/molecules/field-element';
+@import 'partials/molecules/field-row';
+@import 'partials/molecules/jquery-chosen';
+@import 'partials/molecules/jquery-chosen-custom';
+@import 'partials/molecules/gb-ajax-mask';
+@import 'partials/molecules/gb-invoice-hd';
+@import 'partials/molecules/gb-list';
+@import 'partials/molecules/gb-menu';
+@import 'partials/molecules/gb-radio-input';
+@import 'partials/molecules/gb-table-filter';
+@import 'partials/molecules/gb-tabs';
+@import 'partials/molecules/grant-section';
+@import 'partials/molecules/kpi';
+@import 'partials/molecules/labeled-list';
+@import 'partials/molecules/main-navigation';
+@import 'partials/molecules/msg-wrap';
+@import 'partials/molecules/person-info-row';
+@import 'partials/molecules/prescription-section';
+@import 'partials/molecules/portal-popup';
+@import 'partials/molecules/portlet-login';
+@import 'partials/molecules/portlet-msg';
+@import 'partials/molecules/portlet-navigation';
+@import 'partials/molecules/simple-list';
+@import 'partials/molecules/simple-table';
+@import 'partials/molecules/statistics-filter';
+@import 'partials/molecules/top-bar';
+@import 'partials/molecules/ui-calendar';
+@import 'partials/molecules/ui-datatable';
+@import 'partials/molecules/ui-datepicker';
+@import 'partials/molecules/ui-paginator';
+@import 'partials/molecules/ui-selectonebutton';
+@import 'partials/molecules/ui-selectonemenu';
+@import 'partials/molecules/ui-selectonemenu-panel';
+@import 'partials/molecules/ui-slider';
+@import 'partials/molecules/ui-widget-header';
+@import 'partials/molecules/user-progress';
+@import 'partials/molecules/visible-interaction';
+
+@import 'partials/organisms/content';
+@import 'partials/organisms/footer';
+@import 'partials/organisms/header';
+
+@import 'partials/utilities/development';
+
+@import 'shame';

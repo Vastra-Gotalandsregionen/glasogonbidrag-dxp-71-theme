@@ -1,0 +1,70 @@
+//.chosen-container-active.chosen-with-drop .chosen-single
+//.chosen-container-active.chosen-with-drop .chosen-single
+
+
+
+.chosen-container {
+
+  font-size: 1em;
+
+  .chosen-single {
+
+    background: $gb-white;
+    border-color: $gb-silver;
+    height: auto;
+    padding: 4px 0 4px 8px;
+
+    div {
+      width: 30px;
+      b {
+        background: none !important;
+        &:after {
+          @include iconfont();
+          content: $content-caret-down;
+          display: block;
+          height: 100%;
+          padding: 4px 4px;
+          text-align: center;
+          width: 100%;
+          @include box-sizing(border-box);
+        }
+      }
+    }
+
+  }
+
+  .chosen-results {
+      li{
+        &.active-result {
+          &.highlighted {
+            background: $gb-mirage;
+            color: $gb-white;
+          }
+        }
+      }
+  }
+
+  &.chosen-container-active {
+
+    background: $gb-white;
+    outline: 0;
+    @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6));
+
+    .chosen-single {
+      background: $gb-white;
+      border-color: rgba(82, 168, 236, 0.8);
+      outline: 0;
+    }
+
+    &.chose-with-drop {
+
+      .chosen-drop {
+        background: $gb-white;
+        border-color: rgba(82, 168, 236, 0.8);
+        outline: 0;
+      }
+    }
+
+  }
+
+}

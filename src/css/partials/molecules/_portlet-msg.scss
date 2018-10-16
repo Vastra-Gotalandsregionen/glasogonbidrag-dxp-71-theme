@@ -1,0 +1,19 @@
+.portlet-msg-error,
+.portlet-msg-warn {
+  border: 1px solid transparent;
+  margin-bottom: 20px;
+  padding: 15px;
+  @include border-radius(4px);
+}
+
+.portlet-msg-error {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+}
+
+.portlet-msg-warn {
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #8a6d3b;
+}
