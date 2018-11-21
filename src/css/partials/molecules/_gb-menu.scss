@@ -1,9 +1,3 @@
-$menuWidthMinimized: 60px;
-$menuWidthMaximized: 340px;
-$menuIconItemLineHeight: 50px;
-$menuIconItemWidth: 60px;
-$menuItemPadding: 10px;
-
 .gb-menu-main {
   background-color: $gb-mirage;
   color: $gb-white;
@@ -32,12 +26,12 @@ $menuItemPadding: 10px;
     padding-top: 0;
     position: fixed;
     top: 0;
-    width: $menuWidthMinimized;
+    width: $gbMenuWidthMinimized;
 
     transition: transform 0.3s, width 0.3s;
 
     &.gb-menu-open {
-      width: $menuWidthMaximized;
+      width: $gbMenuWidthMaximized;
     }
 
   }
@@ -59,8 +53,8 @@ $menuItemPadding: 10px;
     height: 100%;
     position: absolute;
     overflow-y: scroll;
-    width: $menuWidthMaximized;
-    //width: $menuWidthMaximized + 30px;
+    width: $gbMenuWidthMaximized;
+    //width: $gbMenuWidthMaximized + 30px;
     z-index: 10;
   }
 
@@ -72,12 +66,12 @@ $menuItemPadding: 10px;
 
     list-style: none;
     text-transform: none;
-    line-height: $menuIconItemLineHeight;
+    line-height: $gbMenuIconItemLineHeight;
     text-align: left;
 
     li {
       border-top: 1px solid tint($gb-mirage, 10);
-      line-height: $menuIconItemLineHeight;
+      line-height: $gbMenuIconItemLineHeight;
 
       &.gb-open-only {
         display: none;
@@ -95,7 +89,7 @@ $menuItemPadding: 10px;
         > span {
           background-color: darken($gb-mirage, 5);
           display: block;
-          padding: $menuItemPadding $menuItemPadding;
+          padding: $gbMenuItemPadding $gbMenuItemPadding;
           visibility: hidden;
 
           .username {
@@ -110,20 +104,20 @@ $menuItemPadding: 10px;
         // Start test
         height: 70px;
         // End test
-        padding: $menuItemPadding;
+        padding: $gbMenuItemPadding;
 
         .user-progress {
           .user-progress-simple {
             display: block;
             line-height: 70px;
-            width: $menuWidthMinimized - $menuItemPadding - $menuItemPadding;
+            width: $gbMenuWidthMinimized - $gbMenuItemPadding - $gbMenuItemPadding;
           }
           .user-progress-details {
             display: none;
           }
           .user-progress-loading-mask {
             background: $gb-mirage;
-            width: $menuWidthMinimized - $menuItemPadding - $menuItemPadding;
+            width: $gbMenuWidthMinimized - $gbMenuItemPadding - $gbMenuItemPadding;
 
             &:before {
               top: 35%;
@@ -140,7 +134,7 @@ $menuItemPadding: 10px;
           display: inline-block;
           line-height: 1;
           text-align: center;
-          width: $menuIconItemWidth;
+          width: $gbMenuIconItemWidth;
         }
 
         &.gb-icon-default a:before {
@@ -192,8 +186,8 @@ $menuItemPadding: 10px;
 
   .logo {
     display: none;
-    padding: 2*$menuItemPadding 0;
-    bottom: $menuItemPadding;
+    padding: 2*$gbMenuItemPadding 0;
+    bottom: $gbMenuItemPadding;
     margin: 0 auto;
     width: 100%;
     text-align: center;

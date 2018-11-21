@@ -97,9 +97,16 @@ $font-weight-ultralight: 	100;
 // Padding and sizes
 // -------------------------
 
-$quick-access-navigation-height: 64px;
+$quick-access-navigation-height: 56px;
 
 $default-border-radius:		3px; //Compass named default variable.
+
+$gbMenuWidthMinimized: 60px;
+$gbMenuWidthMaximized: 340px;
+$gbMenuIconItemLineHeight: 50px;
+$gbMenuIconItemWidth: 60px;
+$gbMenuItemPadding: 10px;
+
 
 // Content (font-awesome)
 // -------------------------

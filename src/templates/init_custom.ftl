@@ -40,6 +40,11 @@
 	<#assign css_class = css_class + " js-allow-hotkeys" />
 </#if>
 
+<#------ Theme Body CSS class -------------------------------------------------->
+
+<#assign css_class = css_class + " gb-theme" />
+
+
 <#------ URL:s -------------------------------------------------->
 
 <#assign applicationURL = "/group" + page_group.getFriendlyURL() />

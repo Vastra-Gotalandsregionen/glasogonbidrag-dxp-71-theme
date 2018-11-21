@@ -1,0 +1,22 @@
+// Override styling for toggle admin mode from theme contributor
+.gb-theme {
+
+  .toggle-admin-mode {
+    background-color: $gb-mirage;
+    color: $gb-white;
+
+    border-radius: 0;
+    width: $gbMenuWidthMinimized;
+    height: $gbMenuWidthMinimized;
+    left: 0;
+    padding: 12px;
+
+    &:hover{
+      background-color: tint($gb-mirage, 15);
+      color: $gb-white;
+    }
+
+
+  }
+
+}
