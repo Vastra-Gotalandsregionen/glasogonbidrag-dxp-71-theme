@@ -27,7 +27,7 @@
       _initLoginPage();
       _initMainMenu();
       _initUserGoal();
-      _initToggleDockbar();
+      //_initToggleDockbar();
       _registerViewPartialReloadListener();
 
       refreshUI();
@@ -311,24 +311,6 @@
         pollerMillis: 100000,
         progressUrl: progressUrl
       });
-    }
-
-    function _initToggleDockbar() {
-
-      $('.toggle-dockbar').on('click', function(e) {
-        var body = $('body');
-
-        if(body.hasClass('dockbar-visible')) {
-          body.removeClass('dockbar-visible');
-          Liferay.Store('toggle_dockbar', 'hidden');
-        } else {
-          body.addClass('dockbar-visible');
-          Liferay.Store('toggle_dockbar', 'visible');
-        }
-
-        return false;
-      });
-
     }
 
     function _initPrescriptionCheckbox() {

@@ -54,12 +54,6 @@
             </li>
           </#if>
 
-          <#if show_dockbar>
-      			<li class="gb-icon gb-icon-dockbar gb-open-only">
-      				<a class="toggle-dockbar js-toggle-admin-mode" href="javascript:;">Toggle Dockbar</a>
-      			</li>
-      		</#if>
-
       		<#if is_signed_in>
       			<li class="gb-icon gb-icon-sign-out gb-open-only">
       				<a href="${sign_out_url}" id="sign-out" rel="nofollow">${sign_out_text}</a>

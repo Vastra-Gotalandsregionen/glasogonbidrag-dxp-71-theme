@@ -34,11 +34,6 @@
 	<#assign is_login_page = true />
 </#if>
 
-<#------ Admin controls -------------------------------------------------->
-<#assign custom_show_admin_controls = sessionClicks.get(request, "custom_admin_controls", "custom-admin-controls-closed") />
-
-<#assign css_class = css_class + " " + custom_show_admin_controls />
-
 <#------ Hotkeys -------------------------------------------------->
 
 <#if allow_hotkeys>
