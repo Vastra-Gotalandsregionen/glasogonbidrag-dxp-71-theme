@@ -5,7 +5,7 @@
 	<compatibility>
 		<version>7.1.0+</version>
 	</compatibility>
-	<theme id="glasogonbidrag-dxp-71-theme" name="Glasogonbidrag DXP71 Theme">
+	<theme id="glasogonbidrag-theme" name="Glasogonbidrag DXP71 Theme">
 		<template-extension>ftl</template-extension>
 		<portlet-decorator id="barebone" name="Barebone">
 			<portlet-decorator-css-class>portlet-barebone</portlet-decorator-css-class>
