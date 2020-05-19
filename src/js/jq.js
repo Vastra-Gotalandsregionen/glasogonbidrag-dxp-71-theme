@@ -30,9 +30,13 @@
       //_initToggleDockbar();
       _registerViewPartialReloadListener();
 
-      refreshUI();
-
-
+      Liferay.on(
+        'allPortletsReady',
+      
+        function() {
+          refreshUI();
+        }
+      );
 
 
       //$('body').userGoal();
@@ -73,9 +77,9 @@
           let handler = function () {
             focusElement.focus();
           };
-          setTimeout(handler, 100);
-          setTimeout(handler, 200);
-          setTimeout(handler, 400);
+          // setTimeout(handler, 100);
+          // setTimeout(handler, 200);
+          // setTimeout(handler, 400);
 
         }
 
