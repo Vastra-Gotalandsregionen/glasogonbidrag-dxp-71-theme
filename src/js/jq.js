@@ -41,7 +41,7 @@
     // Run when data is loaded
     // i.e. when event 'viewReloaded' topic us broadcast on radio
     function refreshUI() {
-      //_focusOnLoad();
+      _focusOnLoad();
       _initBoxCollapsible();
       _initChipCollapsible();
       _initHotkeys();
@@ -60,7 +60,7 @@
 
     function _focusOnLoad() {
 
-      var focusCandidates = $('[data-focus="true"]');
+      var focusCandidates = $('[autofocus="true"]');
 
       if(focusCandidates.size() > 0) {
         focusElement = $(focusCandidates[0]);
@@ -69,6 +69,14 @@
           focusElement.find(':input:not(:hidden)').get(0).focus();
         } else {
           focusElement.focus();
+
+          let handler = function () {
+            focusElement.focus();
+          };
+          setTimeout(handler, 100);
+          setTimeout(handler, 200);
+          setTimeout(handler, 400);
+
         }
 
       }
