@@ -73,14 +73,6 @@
           focusElement.find(':input:not(:hidden)').get(0).focus();
         } else {
           focusElement.focus();
-
-          let handler = function () {
-            focusElement.focus();
-          };
-          // setTimeout(handler, 100);
-          // setTimeout(handler, 200);
-          // setTimeout(handler, 400);
-
         }
 
       }
