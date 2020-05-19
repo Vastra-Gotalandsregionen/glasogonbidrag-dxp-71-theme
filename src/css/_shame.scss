@@ -6,3 +6,45 @@ body.portal-popup {
     background-color: white;
     background-image: none;
 }
+
+.custom-admin-controls-open.controls-hidden,
+.controls-visible,
+.controls-hidden {
+
+    .portlet > .portlet-topper {
+        display: none;
+    }
+    
+    .portlet {
+      .portlet-header {
+        display: none;
+      }
+    }
+
+    .portlet-column-content.empty {
+        padding: 0;
+    }
+
+}
+
+.custom-admin-controls-open {
+
+    &.controls-visible {
+
+        .portlet > .portlet-topper {
+            display: block;
+        }
+        
+        .portlet {
+          .portlet-header {
+            display: block;
+          }
+        }
+        
+        .portlet-column-content.empty {
+            padding: 50px;
+        }
+    
+
+    }
+}
